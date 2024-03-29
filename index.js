@@ -58,7 +58,7 @@ async function main() {
 // body parser - middleware
 server.use(cors());
 server.use(express.json());
-server.use(morgan("default"));
+// server.use(morgan("default"));
 server.use(express.static(path.resolve(__dirname, process.env.PUBLIC_DIR)));
 server.use("/products", productRouter.router);
 server.use("/users", userRouter.router);
